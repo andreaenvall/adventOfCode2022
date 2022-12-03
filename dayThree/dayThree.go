@@ -1,8 +1,42 @@
 package daythree
 
 import (
+	"fmt"
 	"strings"
 )
+
+func DayThreePartTwo(array []string) int {
+	myString := ""
+	group1 := ""
+	group2 := ""
+	group3 := ""
+	count := 0
+	for _, v := range array {
+		count += 1
+		if group1 == "" {
+			group1 = v
+		} else if group2 == "" {
+			group2 = v
+		} else if group3 == "" {
+			group3 = v
+			for _, v := range group1 {
+				if strings.Contains(group3, string(v)) && strings.Contains(group2, string(v)) {
+					myString += string(v)
+					fmt.Println(string(v))
+					fmt.Println(count)
+					group1 = ""
+					group2 = ""
+					group3 = ""
+					count = 0
+					break
+				}
+			}
+
+		}
+
+	}
+	return countString(myString)
+}
 
 func DayThreePartOne(array []string) int {
 	myString := ""

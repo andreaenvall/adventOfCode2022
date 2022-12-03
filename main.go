@@ -22,4 +22,5 @@ func main() {
 	// Day 3
 	puzzle3 := three.PuzzleInput()
 	fmt.Println("Result day 3: ", three.DayThreePartOne(puzzle3))
+	fmt.Println("Result day 3: ", three.DayThreePartTwo(puzzle3))
 }
