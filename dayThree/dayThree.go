@@ -1,7 +1,6 @@
 package daythree
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -22,8 +21,6 @@ func DayThreePartTwo(array []string) int {
 			for _, v := range group1 {
 				if strings.Contains(group3, string(v)) && strings.Contains(group2, string(v)) {
 					myString += string(v)
-					fmt.Println(string(v))
-					fmt.Println(count)
 					group1 = ""
 					group2 = ""
 					group3 = ""
