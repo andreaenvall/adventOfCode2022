@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	five "github.com/andreaenvall/adventOfCode2022/dayFive"
 	four "github.com/andreaenvall/adventOfCode2022/dayFour"
 	one "github.com/andreaenvall/adventOfCode2022/dayOne"
 	three "github.com/andreaenvall/adventOfCode2022/dayThree"
@@ -28,4 +29,8 @@ func main() {
 	puzzle4 := four.PuzzleInput()
 	fmt.Println("Result day 4: ", four.DayFourPartOne(puzzle4))
 	fmt.Println("Result day 4: ", four.DayFourPartTwo(puzzle4))
+
+	puzzle5 := five.PuzzleInput()
+	fmt.Println("Result day 5: ", five.DayFivePartOne(puzzle5))
+	fmt.Println("Result day 5: ", five.DayFivePartTwo(puzzle5))
 }
