@@ -27,5 +27,5 @@ func main() {
 
 	puzzle4 := four.PuzzleInput()
 	fmt.Println("Result day 4: ", four.DayFourPartOne(puzzle4))
-	// fmt.Println("Result day 3: ", three.DayThreePartTwo(puzzle3))
+	fmt.Println("Result day 4: ", four.DayFourPartTwo(puzzle4))
 }

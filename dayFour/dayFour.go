@@ -5,6 +5,45 @@ import (
 	"strings"
 )
 
+func DayFourPartTwo(array []string) int {
+	intVar1 := 0
+	intVar2 := 0
+	intVar3 := 0
+	intVar4 := 0
+	count := 0
+	pairsCount := 0
+	for _, v := range array {
+		count += 1
+		number := strings.Split(v, "-")
+
+		if count == 1 {
+			intVar1, _ = strconv.Atoi(number[0])
+			intVar2, _ = strconv.Atoi(number[1])
+		}
+		if count == 2 {
+			intVar3, _ = strconv.Atoi(number[0])
+			intVar4, _ = strconv.Atoi(number[1])
+		}
+		if intVar1 >= intVar3 && intVar1 <= intVar4 {
+			pairsCount += 1
+		} else if (intVar3 >= intVar1) && (intVar3 <= intVar2) {
+			pairsCount += 1
+		} else if (intVar4 <= intVar2) && (intVar4 >= intVar1) {
+			pairsCount += 1
+		} else if (intVar2 <= intVar4) && (intVar2 >= intVar3) {
+			pairsCount += 1
+		}
+		if count == 2 {
+			intVar1 = 0
+			intVar2 = 0
+			intVar3 = 0
+			intVar4 = 0
+			count = 0
+		}
+	}
+	return pairsCount
+}
+
 func DayFourPartOne(array []string) int {
 	intVar1 := 0
 	intVar2 := 0
