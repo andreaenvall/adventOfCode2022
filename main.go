@@ -6,6 +6,7 @@ import (
 	five "github.com/andreaenvall/adventOfCode2022/dayFive"
 	four "github.com/andreaenvall/adventOfCode2022/dayFour"
 	one "github.com/andreaenvall/adventOfCode2022/dayOne"
+	six "github.com/andreaenvall/adventOfCode2022/daySix"
 	three "github.com/andreaenvall/adventOfCode2022/dayThree"
 	two "github.com/andreaenvall/adventOfCode2022/dayTwo"
 )
@@ -33,4 +34,8 @@ func main() {
 	puzzle5 := five.PuzzleInput()
 	fmt.Println("Result day 5: ", five.DayFivePartOne(puzzle5))
 	fmt.Println("Result day 5: ", five.DayFivePartTwo(puzzle5))
+
+	puzzle6 := six.PuzzleInput()
+	fmt.Println("Result day 6: ", six.DaySixPartOne(puzzle6))
+	fmt.Println("Result day 6: ", six.DaySixPartTwo(puzzle6))
 }
