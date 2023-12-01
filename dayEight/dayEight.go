@@ -1,7 +1,5 @@
 package dayeight
 
-import "fmt"
-
 func DayEightPartTwo(array [][]int) int {
 	countTrees := 0
 	maxTrees := 0
@@ -70,14 +68,9 @@ func DayEightPartTwo(array [][]int) int {
 			}
 
 			countTrees = (up * left * down * right)
-			fmt.Println(up, left, down, right)
-			fmt.Println("counttrees", countTrees)
 			if maxTrees < countTrees {
 				maxTrees = countTrees
 			}
-			// fmt.Println(array[i][j])
-			// fmt.Println(up, left, down, right)
-			// fmt.Println(maxTrees)
 		}
 
 	}

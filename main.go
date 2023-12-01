@@ -6,10 +6,13 @@ import (
 	eight "github.com/andreaenvall/adventOfCode2022/dayEight"
 	five "github.com/andreaenvall/adventOfCode2022/dayFive"
 	four "github.com/andreaenvall/adventOfCode2022/dayFour"
+	nine "github.com/andreaenvall/adventOfCode2022/dayNine"
 	one "github.com/andreaenvall/adventOfCode2022/dayOne"
 	seven "github.com/andreaenvall/adventOfCode2022/daySeven"
 	six "github.com/andreaenvall/adventOfCode2022/daySix"
+	ten "github.com/andreaenvall/adventOfCode2022/dayTen"
 	three "github.com/andreaenvall/adventOfCode2022/dayThree"
+	dayTwentyOne "github.com/andreaenvall/adventOfCode2022/dayTwentyOne"
 	two "github.com/andreaenvall/adventOfCode2022/dayTwo"
 )
 
@@ -48,4 +51,14 @@ func main() {
 	puzzle8 := eight.PuzzleInput()
 	fmt.Println("Result day 8: ", eight.DayEightPartOne(puzzle8))
 	fmt.Println("Result day 8: ", eight.DayEightPartTwo(puzzle8))
+
+	puzzle9 := nine.PuzzleInputEx()
+	fmt.Println("Result day 9: ", nine.DayNinePartOne(puzzle9, 4, 0, 4, 0))
+	//fmt.Println("Result day 9: ", nine.DayNinePartTwo(puzzle9))
+	puzzle10 := ten.PuzzleInput()
+	fmt.Println("Result day 10: ", ten.DayTenPartOne(puzzle10))
+	//fmt.Println("Result day 10: ", ten.DayTenPartTwo(puzzle10))
+	fmt.Println("Result day 21: ")
+	dayTwentyOne.MainDayTwentyOne()
+
 }
