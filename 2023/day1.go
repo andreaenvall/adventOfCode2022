@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func main() {
+func day1() {
 	findallDigits()
 }
 
@@ -25,7 +25,7 @@ func findallDigits() {
 		"nine":  9,
 	}
 
-	for _, c := range PuzzleInput() {
+	for _, c := range PuzzleInputDay1() {
 		rowarray := []string{}
 		stringNumbers := ""
 		for _, v := range c {
@@ -78,7 +78,7 @@ func findallDigits() {
 	fmt.Println("RESULT:", result)
 }
 
-func PuzzleInput() []string {
+func PuzzleInputDay1() []string {
 	array := []string{
 		"ckmb52fldxkseven3fkjgcbzmnr7",
 		"gckhqpb6twoqnjxqplthree2fourkspnsnzxlz1",
@@ -1080,19 +1080,6 @@ func PuzzleInput() []string {
 		"eightfblzpmhs4",
 		"fbbdeightzzsdffh8jbjzxkclj",
 		"3nine6five1",
-	}
-	return array
-}
-
-func PuzzleInputEx() []string {
-	array := []string{
-		"two1nine",
-		"eightwothree",
-		"abcone2threexyz",
-		"xtwone3four",
-		"4nineeightseven2",
-		"zoneight234",
-		"7pqrstsixteen",
 	}
 	return array
 }
