@@ -6,10 +6,6 @@ import (
 	"strings"
 )
 
-func main() {
-	cubeGamepart1()
-	cubeGamePart2()
-}
 func cubeGamePart2() {
 	powerArray := []int{}
 
