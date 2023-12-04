@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+
+	"golang.org/x/exp/slices"
 )
 
 func main() {
@@ -26,14 +28,13 @@ func findAllCopiesOfCard() {
 		id := strings.Split(numbers[0], " ")
 
 		idInt, _ := strconv.Atoi(id[1])
-		fmt.Println("idint:", idInt)
 
 		winningNumbsArr := strings.Split(winningNumb, " ")
 		myNumbsArr := strings.Split(myNumb, " ")
 
 		for _, wN := range winningNumbsArr {
-			for _, mN := range myNumbsArr {
-				if wN == mN && wN != "" && mN != "" && wN != " " && mN != " " {
+			if slices.Contains(myNumbsArr, wN) {
+				if wN != "" && wN != " " {
 					Wincount++
 				}
 			}
