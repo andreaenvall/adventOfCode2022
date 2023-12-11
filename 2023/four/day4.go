@@ -8,10 +8,6 @@ import (
 	"golang.org/x/exp/slices"
 )
 
-func main() {
-	findWinningNumbers()
-	findAllCopiesOfCard()
-}
 func findAllCopiesOfCard() {
 	cards := PuzzleInput4()
 	Wincount := 0
@@ -39,13 +35,11 @@ func findAllCopiesOfCard() {
 				}
 			}
 		}
-		if Wincount != 0 {
-			for j := 1; j <= Wincount; j++ {
-				index := idInt - 1 + j
-				cards = append(cards, cards[index])
-
-			}
+		for j := 1; j <= Wincount; j++ {
+			index := idInt - 1 + j
+			cards = append(cards, cards[index])
 		}
+
 		Wincount = 0
 	}
 
@@ -57,7 +51,6 @@ func findWinningNumbers() {
 	winningValueCard := 0
 	cards := PuzzleInput4()
 	count := 0
-	// firstKey := -1
 
 	for _, card := range cards {
 		isfirst := true
@@ -75,10 +68,9 @@ func findWinningNumbers() {
 			for _, mN := range myNumbsArr {
 				if wN == mN && wN != "" && mN != "" {
 					if isfirst {
-						fmt.Println(" fisrt", winningValue)
 						winningValueCard += 1
 					} else {
-						fmt.Println("else fisrt", winningValue)
+
 						winningValueCard += winningValueCard
 					}
 					isfirst = false
@@ -86,7 +78,6 @@ func findWinningNumbers() {
 			}
 
 		}
-		fmt.Println("Winning value per card: ", winningValueCard)
 		winningValue += winningValueCard
 		winningValueCard = 0
 	}
